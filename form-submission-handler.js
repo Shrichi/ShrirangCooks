@@ -1,6 +1,7 @@
 (function() {
   // get all data in form and return object
   function getFormData(form) {
+
     var elements = form.elements;
     var honeypot;
 
