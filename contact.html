@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shrirang Cooks</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header id="header">
+        <ul>
+            <li class = 'heading'>
+                <a href="index.html">
+                    <h1>
+                        Home
+                    </h1>
+                </a>
+            </li>
+            <li class = 'heading'>
+                <a href = "foods.html">
+                    <h1>
+                        Foods
+                    </h1>
+                </a>
+            </li>
+            <li class = 'heading'>
+                <a href = "AboutMe.html">
+                    <h1>
+                        About Me
+                    </h1>
+                </a>
+            </li>
+            <li class = "heading">
+                <a href="contact.html">
+                    <h1>
+                        Contact
+                    </h1>
+                </a>
+            </li>
+            
+        </ul>
+    </header>
+
+    <h1>Contact Us</h1>
+
+    <form id="emailForm">
+        <label for="to">Recipient Email:</label>
+        <input type="email" id="to" name="to" required>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        
+        <label for="text">Message:</label>
+        <textarea id="text" name="text" required></textarea>
+        
+        <button type="button" onclick="sendEmail()">Send Email</button>
+    </form>
+
+    <script>
+        function sendEmail() {
+            const to = document.getElementById('to').value;
+            const subject = document.getElementById('subject').value;
+            const text = document.getElementById('text').value;
+
+            fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ to, subject, text }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Handle success and show a confirmation message to the user
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                // Handle errors and inform the user
+            });
+        }
+    </script>
+
+</body>
+  <script>
+    
+  </script>
+</html>
