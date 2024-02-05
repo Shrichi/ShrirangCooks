@@ -9,39 +9,14 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <header id="header">
-        <ul>
-            <li class = 'heading'>
-                <a href="index.html">
-                    <h1>
-                        Home
-                    </h1>
-                </a>
-            </li>
-            <li class = 'heading'>
-                <a href = "foods.html">
-                    <h1>
-                        Foods
-                    </h1>
-                </a>
-            </li>
-            <li class = 'heading'>
-                <a href = "AboutMe.html">
-                    <h1>
-                        About Me
-                    </h1>
-                </a>
-            </li>
-            <li class = "heading">
-                <a href="contact.html">
-                    <h1>
-                        Contact
-                    </h1>
-                </a>
-            </li>
-            
-        </ul>
-    </header>
+    <script>
+      fetch('header.html')
+          .then(response => response.text())
+          .then(html => {
+              document.getElementById('header-placeholder').innerHTML = html;
+          });
+  </script>
+  <div id = "header-placeholder"></div>
 
     <h1>Contact Us</h1>
     <h2 class="content-head is-center">Contact Us!</h2>

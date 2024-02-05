@@ -1,4 +1,4 @@
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 600px){
     a{
         color: black;
         text-decoration: none;
@@ -42,11 +42,25 @@
         background-color: lightgrey;
         align-items: center;
         text-align: center;
+        /* display: block; */
+    }
+    .header_label{
+        font-size: 200%;
+    }
+    #header_logo{
+        height: 75px;
+    }
+    #header_logo:hover{
+        /* filter: grayscale(100%); */
+        /* border: 5px black; */
+        /* height: 80px; */
+        filter: blur(2px);
     }
     .heading{
         height: 75%;
         font-size: 100%;
         display: inline-block;
+        /* float: right; */
         padding: 0px 1% 0px 1%;
         margin-left: 1%;
         margin-right: 1%;

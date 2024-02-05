@@ -10,39 +10,14 @@
   </head>
   <body>
     <main>
-        <header id="header">
-            <ul>
-                <li class = 'heading'>
-                    <a href="index.html">
-                        <h1>
-                            Home
-                        </h1>
-                    </a>
-                </li>
-                <li class = 'heading'>
-                    <a href = "foods.html">
-                        <h1>
-                            Foods
-                        </h1>
-                    </a>
-                </li>
-                <li class = 'heading'>
-                    <a href = "AboutMe.html">
-                        <h1>
-                            About Me
-                        </h1>
-                    </a>
-                </li>
-                <li class = "heading">
-                    <a href="contact.html">
-                        <h1>
-                            Contact
-                        </h1>
-                    </a>
-                </li>
-                
-            </ul>
-        </header>
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header-placeholder').innerHTML = html;
+                });
+        </script>
+        <div id = "header-placeholder"></div>
         <h1 id = "title">Welcome  Shrirang Cooks!</h1>  
         <section id = "foods" class = "section">
             <img class = "imgv" src="images/chocolatetart.jpg" alt="Almond Chocolate Tart">
@@ -56,5 +31,4 @@
         </section>
     </main>
   </body>
-  <script src="script/index.js"></script>
 </html>
