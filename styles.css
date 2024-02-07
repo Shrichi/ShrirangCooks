@@ -11,7 +11,7 @@
     }
     
     .imgh{
-        width:65%;
+        width:65.01%;
     }
     img:hover{
         filter: grayscale(100%);

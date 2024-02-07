@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Make the tas DataFrame
 tas = pd.DataFrame([
@@ -23,5 +24,9 @@ print()
 
 # Join the datasets by ta_id and grader_id
 merged = tas.merge(grading, left_on='ta_id', right_on='grader_id', how = "outer")
+
+merged.plot()
+plt.savefig("smt.png")
+
 print('merged')
 print(merged)
