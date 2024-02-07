@@ -28,7 +28,7 @@ function search(){
         var search_bar_value = String(search_bar.value).toLowerCase()
         var edit_distance = levenshteinDistance(search_bar_value, food.id)
         if(food.id.includes(search_bar_value) || edit_distance <= 2){
-            food.style.display = "list-item"
+            food.style.display = "inline-block"
         }else{
             food.style.display = "none"
         }

@@ -13,7 +13,11 @@
     .imgh{
         width:65.01%;
     }
-    img:hover{
+    .imgv:hover{
+        filter: grayscale(100%);
+        cursor: pointer;
+    }
+    .imgh:hover{
         filter: grayscale(100%);
         cursor: pointer;
     }
@@ -33,7 +37,7 @@
         align-self: center;
         text-align: center;
         /* color: white; */
-        background-color: rgba(0, 0, 0, 0.1);
+        /* background-color: rgba(0, 0, 0, 0.1); */
     }
     
     #header{
@@ -114,5 +118,35 @@
         font-size: 1rem; 
         text-align: center;
         margin: 10px;
+    }
+    .foodlist{
+        width: 100%;
+        display: inline-block;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+        margin: 5px;
+        align-items: center;
+    }
+    .image_container{
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        float: left;
+        /* display: inline-block; */
+
+    }
+    .foodlist_imgh{
+        height: 200px;
+        margin: 0px -50px;
+    }
+    .foodlist_imgv{
+        width: 200px;
+        margin: -25px 0px;
+    }
+    .foodlist_title{
+        display: inline;
+    }
+    .food_yap{
+        margin-left: 225px;
     }
 }
