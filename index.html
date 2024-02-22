@@ -7,6 +7,9 @@
     <title>Shrirang Cooks</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body>
     <main>
@@ -19,16 +22,44 @@
         </script>
         <div id = "header-placeholder"></div>
         <h1 id = "title">Welcome to Shrirang Cooks!</h1>  
-        <section id = "foods" class = "section">
-            <a href = "almondtart.html"><img class = "imgv" src="images/chocolatetart.jpg" alt="Chocolate Almond Tart"></a>
-            <a href = "tuttifrutti.html"><img class = "imgh" src="images/tuttifruti.jpg" alt="Tutti Frutti Loaf"></a>
-            <a href="tuttifrutti.html"><img class = "imgh" src = "images/lemoncake.jpg" alt="Iced Lemon Cake"></a>
-            <img class = "imgv" src="images/applepie.jpg" alt="Apple Pie">
-            <img class = "imgv" src="images/cinnamonrolls.jpg" alt="Cinnamon Rolls">
-            <p>
-                FOOD
-            </p>
-        </section>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 img-grid img-link-grid">
+              <div class="img-caption">
+                Chocolate Tart
+              </div>
+              <a href="almondtart.html">
+                <img src="images/chocolatetart.jpg" class="img-fluid" alt="Image 2">
+              </a>
+            </div>
+            <div class="col-sm-8 img-grid img-link-grid">
+              <div class="img-caption">
+                Tutti Frutti Cake
+              </div>
+              <a href="tuttifrutti.html">
+                <img src="images/tuttifruti.jpg" class="img-fluid" alt="Image 2">
+              </a>
+            </div>
+            <div class="col-sm-8 img-grid img-link-grid">
+              <div class="img-caption">
+                Iced Lemon Loaf
+              </div>
+              <img src="images/lemoncake.jpg" class="img-fluid" alt="Image 2">
+            </div>
+            <div class="col-sm-4 img-grid img-link-grid">
+              <div class="img-caption">
+                Cinnamon Apple Pie
+              </div>
+              <img src="images/applepie.jpg" class="img-fluid" alt="Image 2">
+            </div>
+            <div class="col-sm-4 img-grid img-link-grid">
+              <div class="img-caption">
+                Cinnamon Rolls
+              </div>
+              <img src="images/cinnamonrolls.jpg" class="img-fluid" alt="Image 2">
+            </div>
+          </div>
+        </div>
     </main>
   </body>
 </html>
