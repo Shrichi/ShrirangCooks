@@ -1,4 +1,4 @@
-const search_bar = document.getElementById("Search");
+const search_bar = document.getElementById("search");
 
 const levenshteinDistance = (s, t) => {
     if (!s.length) return t.length;
@@ -22,15 +22,27 @@ const levenshteinDistance = (s, t) => {
 
 function search(){
 
-    var foods = document.querySelectorAll(".foodlist");
-
+    var foods = document.querySelectorAll(".food-list-item");
+    var search_bar_value = "| " + String(search_bar.value).toLowerCase()
     foods.forEach(function(food){
-        var search_bar_value = String(search_bar.value).toLowerCase()
-        var edit_distance = levenshteinDistance(search_bar_value, food.id)
-        if(food.id.includes(search_bar_value) || edit_distance <= 2){
-            food.style.display = "inline-block"
+        const foodtags = food.dataset.tags.split(" ");
+        var edit_distance = levenshteinDistance(search_bar_value, food.id);
+        var search_queries = search_bar_value.split(" ");
+        search_queries = search_queries.filter(item => item !== "")
+        console.log(search_queries)
+        var tag_contains_search = false;
+        for (const item1 of search_queries) {
+            for (const item2 of foodtags) {
+                if (item2.includes(item1)) {
+                    tag_contains_search = true;
+                }
+            }
+        }
+        // const tag_contains_search = foodtags.some(word => word.includes(search_bar_value))
+        if(tag_contains_search || edit_distance <= 2 || search_queries.length === 1){
+            food.style.display = "flex";
         }else{
-            food.style.display = "none"
+            food.style.display = "none";
         }
     })
 

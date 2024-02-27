@@ -1,5 +1,6 @@
 body{
     background-color: #F9EFDB;
+    margin-bottom: 100px;
 }
 a{
     color: black;
@@ -27,15 +28,20 @@ h1{
     cursor: pointer;
 }
 .img-caption{
-    background-color: #EBD9B4;
+    padding: 0;
+    margin: 0;
+    background-color: #9DBC98;
+    border: 2px solid #638889;
+    border-bottom: 0px;
 }
 #header{
     padding: 0px;
+    border-bottom: 2px solid #638889;
     background-color: #9DBC98;
 }
 #header_logo{
     height: 75px;
-    border: black solid 2px;
+    border: #638889 solid 2px;
     margin-left: 5px;
 }
 #header_logo:hover{
@@ -70,37 +76,57 @@ h1{
     animation: highlight_header 150ms linear;
 }
 #foods{
-    display: block;
-    width: 80%;
     text-align: center;
-    margin-left: 12.5%;
-    align-items: center;
 }
-.foodlist{
+.food-list-img{
+    height: 100%;
     width: 100%;
-    display: inline-block;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.list-img-container{
+    width: 25%;
+    position: relative;
+}
+.list-img-container::before{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+.food-list-item{
+    border-bottom: 1px black solid;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    margin: 10px;
+}
+span{
+    border-bottom: 2px solid #638889;
+    display: inline-block;
+    width: 100%;
     margin: 5px;
-    align-items: center;
 }
-.image_container{
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    float: left;
+.img_step{
+    width: 30%;
+    margin: 5px;
 }
-.foodlist_imgh{
-    height: 200px;
-    margin: 0px -50px;
+@media screen and (min-width: 575px) {
+    .food-page-img{
+        display: inline;
+        width: 100%;
+        border: 2px solid #638889;
+    }
+    .sm-img{
+        display: none;
+    }
 }
-.foodlist_imgv{
-    width: 200px;
-    margin: -25px 0px;
-}
-.foodlist_title{
-    display: inline;
-}
-.food_yap{
-    margin-left: 225px;
+@media screen and (max-width: 575px) {
+    .food-page-img{
+        display: none;
+    }
+    .sm-img{
+        display: inline;
+        width: 100%;
+        border: 2px solid #638889;
+    }
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shrirang Cooks</title>
-    <link rel="stylesheet" href="./foodpage.css">
+    <!-- <link rel="stylesheet" href="./foodpage.css"> -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -21,48 +21,54 @@
                 });
         </script>
         <div id = "header-placeholder"></div>
-        <!-- <h1 style = "text-align: center;" id = "title">Welcome to Shrirang Cooks!</h1>   -->
-        <img id = "foodimg" src = "images/churro.jpg">
-        <section id="outer">
-            <h1 id = "foodname">Mini Churros</h1>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-sm-8">
+                    <h1 id = "foodname">Mini Churros</h1>
+                    <img class = "sm-img" src="images/churro.jpg">
+                    <h2>What are churros?</h2>
+                    <p>Churros are a popular Spanish and Portugese dessert made of fried dough, and usually coated in cinnamon sugar. Their long, rigid shape makes them perfectly crispy on the outside with a soft buttery inside. These warm delicacies are best served fresh with a dip such as dulce de leche, chocolate sauce, or anything that seems fitting to you. My mini churros are eggless and consist of just a few simple household ingredients, fried to perfection with the perfect cruch for a satisfactory treat.</p>
+                    <span></span>
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>1 cup flour</li>
+                        <li>A pinch of Salt</li>
+                        <li>1/4 tsp Baking Soda</li>
+                        <li>1 cup water</li>
+                        <li>1 tbsp sugar for batter</li>
+                        <li>1 tsp vanilla extract or to taste</li>
+                        <li>2 tbsp butter or neutral oil</li>
+                        <li>2 cups vegetable or canola oil for frying</li>
+                        <li>1/2 cup granulated sugar for dusting</li>
+                        <li>1 tsp cinnamon or to taste</li>
+                        <li>Optional dipping sauce chocolate, strawberry, or glaze</li>
+                    </ul>
+                    <span></span>
+                    <h2>Recipe</h2>
+                    <ol>
+                        <li>In a shallow bowl mix together the granulated sugar and cinnamon </li>
+                        <img class = "img_step" src="images/cinasugar.jpg" alt="Cinnamon Sugar dusting">
+                        <li>In a saucepan, melt and whisk the butter, salt, sugar for the batter, and one cup water</li>
+                        <img class = "img_step" src="images/churrounmelted.jpg" alt="Unmelted Batter">
+                        <img class = "img_step" src="images/churromelted.jpg" alt="Melted Batter">
+                        <li>Let the mixture cool and add vanilla extract to taste</li>
+                        <li>Add flour and baking soda and mix until smooth batter is formed</li>
+                        <img class = "img_step" src="images/churrodough.jpg" alt="Final Churro Dough">
+                        <li>Put the batter into a piping bag with a decently large tip</li>
+                        <img class = "img_step" src="images/churropipingbag.jpg" alt="Batter in Piping Bag">
+                        <li>Heat the oil at a medium heat and pipe in desired churro length, using scissors to seperate from piping bag</li>
+                        <img class = "img_step" src="images/churrofrying.jpg" alt="Chruro Frying">
+                        <li>Fry until deep golden brown and take out onto paper towel lined dish to absorb excess oil</li>
+                        <li>Toss in cinnamon sugar and enjoy!</li>
+                        <img class = "img_step" src="images/churrodone.jpg" alt="Finished Churros">
 
-            <h2><strong>What are churros?</strong></h2>
-            <p>Churros are a popular Spanish and Portugese dessert made of fried dough, and usually coated in cinnamon sugar. Their long, rigid shape makes them perfectly crispy on the outside with a soft buttery inside. These warm delicacies are best served fresh with a dip such as dulce de leche, chocolate sauce, or anything that seems fitting to you. My mini churros are eggless and consist of just a few simple household ingredients, fried to perfection with the perfect cruch for a satisfactory treat.</p>
-            <h2>Ingredients:</h2>
-            <ul>
-                <li>1 cup flour</li>
-                <li>A pinch of Salt</li>
-                <li>1/4 tsp Baking Soda</li>
-                <li>1 cup water</li>
-                <li>1 tbsp sugar for batter</li>
-                <li>1 tsp vanilla extract or to taste</li>
-                <li>2 tbsp butter or neutral oil</li>
-                <li>2 cups vegetable or canola oil for frying</li>
-                <li>1/2 cup granulated sugar for dusting</li>
-                <li>1 tsp cinnamon or to taste</li>
-                <li>Optional dipping sauce chocolate, strawberry, or glaze</li>
-            </ul>
-
-            <h2 style="clear: both;">Recipe</h2>
-            <ol>
-                <li>In a shallow bowl mix together the granulated sugar and cinnamon </li>
-                <img class = "img_step" src="images/cinasugar.jpg" alt="Cinnamon Sugar dusting">
-                <li>In a saucepan, melt and whisk the butter, salt, sugar for the batter, and one cup water</li>
-                <img class = "img_step" src="images/churrounmelted.jpg" alt="Unmelted Batter">
-                <img class = "img_step" src="images/churromelted.jpg" alt="Melted Batter">
-                <li>Let the mixture cool and add vanilla extract to taste</li>
-                <li>Add flour and baking soda and mix until smooth batter is formed</li>
-                <img class = "img_step" src="images/churrodough.jpg" alt="Final Churro Dough">
-                <li>Put the batter into a piping bag with a decently large tip</li>
-                <img class = "img_step" src="images/churropipingbag.jpg" alt="Batter in Piping Bag">
-                <li>Heat the oil at a medium heat and pipe in desired churro length, using scissors to seperate from piping bag</li>
-                <img class = "img_step" src="images/churrofrying.jpg" alt="Chruro Frying">
-                <li>Fry until deep golden brown and take out onto paper towel lined dish to absorb excess oil</li>
-                <li>Toss in cinnamon sugar and enjoy!</li>
-                <img class = "img_step" src="images/churrodone.jpg" alt="Finished Churros">
-
-            </ol>
-        </section>
+                    </ol>
+                </div>
+                <div class = "col-sm-4">
+                    <img class = "food-page-img" src="images/churro.jpg">
+                </div>
+            </div>
+        </div>
     </main>
   </body>
 </html>
