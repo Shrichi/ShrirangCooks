@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shrirang Cooks</title>
-    <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <script>
@@ -21,58 +21,47 @@
   </script>
   <div id = "header-placeholder"></div>
 
-    <h1>Contact Us</h1>
-    <h2 class="content-head is-center">Contact Us!</h2>
-    <aside>
-         <p>
-             We would <em>love</em> to hear from you! </p>
-             <p>Please use the <b><em>Contact Form</em></b>
-             to send us a message.
-         </p>
-     </aside>
-  
-    <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
-    action="https://script.google.com/macros/s/AKfycbzwIg2c57p8_x-dGh-Kbf8BfPZ9ws9qqBH_cckIi09D1X-JxjhLJoKeTH7CHg3zgcMR-g/exec">
-      <!-- change the form action to your script url -->
-  
-      <div class="form-elements">
-        <fieldset class="pure-group">
-          <label for="name">Name: </label>
-          <input id="name" name="name" placeholder="What your Mom calls you" />
-        </fieldset>
-  
-        <fieldset class="pure-group">
-          <label for="message">Message: </label>
-          <textarea id="message" name="message" rows="10"
-          placeholder="Tell us what's on your mind..."></textarea>
-        </fieldset>
-  
-        <fieldset class="pure-group">
-          <label for="email"><em>Your</em> Email Address:</label>
-          <input id="email" name="email" type="email" value=""
-          required placeholder="your.name@email.com"/>
-        </fieldset>
-  
-        <fieldset class="pure-group">
-          <label for="color">Favourite Color: </label>
-          <input id="color" name="color" placeholder="green" />
-        </fieldset>
-  
-        <fieldset class="pure-group honeypot-field" style = "display: none;">
-          <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
-          <input id="honeypot" type="text" name="honeypot" value="" />
-        </fieldset>
-  
-        <button class="button-success pure-button button-xlarge">Send</button>
+    <h1>Contact Us!</h1>
+    <!-- <h2 class="content-head is-center">Contact Us!</h2> -->
+    <div class = "container">
+      <div class = "row">
+        <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+        action="https://script.google.com/macros/s/AKfycbzwIg2c57p8_x-dGh-Kbf8BfPZ9ws9qqBH_cckIi09D1X-JxjhLJoKeTH7CHg3zgcMR-g/exec">
+          <!-- change the form action to your script url -->
+      
+          <div class="form-elements">
+            <fieldset class="pure-group">
+              <input id="name" name="name" placeholder="Name" />
+            </fieldset>
+      
+            <fieldset class="pure-group">
+              <textarea id="message" name="message" rows="10"
+              placeholder="Tell me what's on your mind..."></textarea>
+            </fieldset>
+      
+            <fieldset class="pure-group">
+              <input id="email" name="email" type="email" value=""
+              required placeholder="your.name@email.com"/>
+            </fieldset>
+      
+            <fieldset class="pure-group honeypot-field" style = "display: none;">
+              <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+              <input id="honeypot" type="text" name="honeypot" value="" />
+            </fieldset>
+      
+            <button class="button-success pure-button button-xlarge">Send</button>
+          </div>
+      
+          <!-- Customise the Thankyou Message People See when they submit the form: -->
+          <div class="thankyou_message" style="display:none;">
+            <h2><em>Thanks</em> for contacting us!
+              We will get back to you soon!</h2>
+          </div>
+      
+        </form>
       </div>
-  
-      <!-- Customise the Thankyou Message People See when they submit the form: -->
-      <div class="thankyou_message" style="display:none;">
-        <h2><em>Thanks</em> for contacting us!
-          We will get back to you soon!</h2>
-      </div>
-  
-    </form>
+    </div>
+    
   
     <!-- Submit the Form to Google Using "AJAX" -->
     <script data-cfasync="false" src="form-submission-handler.js"></script>

@@ -110,6 +110,33 @@ span{
     width: 30%;
     margin: 5px;
 }
+.food_talk{
+    font-size: 1.7vw;
+}
+form textarea{
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 100%;
+    margin: 5px;
+}
+form input{
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 100%;
+    margin: 5px;
+}
+form button{
+    border: solid 2px black;
+    background-color: #9DBC98;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: 100%;
+}
+#search{
+    width: 98%;
+    border-radius: 10px;
+    border: solid 2px black;
+}
 @media screen and (min-width: 575px) {
     .food-page-img{
         display: inline;
@@ -119,8 +146,29 @@ span{
     .sm-img{
         display: none;
     }
+    .back_button_container{
+        position: absolute;
+        padding-left: 2vw;
+        float: left;
+    }
+    .back_button{
+        width: 50px;
+        height: 50px;
+        transition: 300ms;
+    }
+    .back_button:hover{
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+    }
 }
 @media screen and (max-width: 575px) {
+    .food_talk{
+        display: none;
+    }
+    .back_button{
+        display: none;
+    }
     .food-page-img{
         display: none;
     }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shrirang Cooks</title>
+    <link rel="stylesheet" href="./foodpage.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <main>
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header-placeholder').innerHTML = html;
+                });
+            function goBack(){
+                window.history.back();
+            }
+        </script>
+        <div id = "header-placeholder"></div>
+        <div onclick="goBack()" class = "back_button_container"><img class ="back_button" src="backbutton.png" alt="Back button"></div>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-sm-8">
+                    <h1 id="foodname"> Strawberry Cream Cheese Puff </h1>
+                    <img class = "sm-img" src="images/strawberryccpuff.jpg">
+                    <h2>What is it?</h2>
+                    This strawberry cream cheese puff has simple, homemade macerated strawberrys with a rich and dense cream cheese frosting for flavor tones of a danish. The base is a perfectly baked and flaky puff pastry sheet with a sugary crunch at the top. This simple yet decadent dish makes the perfect breakfast, brunch or snack for any occasion.
+                    <span></span>
+                    <h2>Ingredients:</h2>
+                    <h3>Strawberries</h3>
+                    <ul>
+                        <li>1.5 cup cubed strawberries</li>
+                        <li>About 1/2 cup any sugar</li>
+                        <li>1 tbsp orange or any citrus zest, optional</li>
+                        <li>Optional splash of vanilla</li>
+                    </ul>
+                    Can use most fruits or a jam
+                    <br>
+                    Leftover liquid can be used as strawberry syrup
+                    <br>
+                    <h3>Cream Cheese Puff</h3>
+                    <ul>
+                        <li>1 cup softened cream cheese</li>
+                        <li>1/2 cup powdered sugar</li>
+                        <li>1 box puff pastry, two sheets room temperature</li>
+                        <li>1 tbsp of milk for glaze</li>
+                        <li>1 tbsp of granulated sugar to sprinkle</li>
+                    </ul>
+                    <span></span>
+                    <h2>Recipe</h2>
+                    <h3>Fillings</h3>
+                    <ol>
+                        <li>Mix strawberries with 1/2 cup sugar, vanilla if using, zest if using, and let sit for atleast 15 minutes</li>
+                        <img class = "img_step" src="images/sccpstrawbs.jpg">
+                        <li>Whisk softened cream cheese with powdered sugar until smooth frosting is formed</li>
+                        <img class = "img_step" src="images/sccpfrosting1.jpg">
+                        <img class = "img_step" src="images/sccpfrosting.jpg">
+                    </ol>
+                    <h3>Pastry Puff</h3>
+                    <ol>
+                        <li>Preheat oven to 375 Fahrenheit</li>
+                        <li>Line a baking sheet with parchment paper</li>
+                        <li>Cut slits on side sections of pastry sheet to fold over</li>
+                        <img style = "rotate: 180deg;" class = "img_step" src="images/sccpslits.jpg">
+                        <li>Add cream cheese and spread evenly around center portion</li>
+                        <img class = "img_step" src="images/sccpstuffed1.jpg">
+                        <li>Strain liquid from strawberries and add the solid chunks over the cream cheese</li>
+                        <img class = "img_step" src="images/sccpstuffed2.jpg">
+                        <li>Fold the slits one by one, alternating sides, to form the "braid" pattern</li>
+                        <img style = "rotate: 180deg;" class = "img_step" src="images/sccpwrapped1.jpg">
+                        <img style = "rotate: 180deg;" class = "img_step" src="images/sccpwrapped2.jpg">
+                        <li>Brush exposed pastry with milk and sprinkle granulated sugar over the pastry</li>
+                        <img class = "img_step" src="images/sccpdusted.jpg">
+                        <li>Bake for 30 minutes, check after 25 for a nice golden crust</li>
+                        <img class = "img_step" src="images/sccpdone.jpg">
+                    </ol>
+                </div>
+                <div class = "col-sm-4">
+                    <img class = "food-page-img" src="images/strawberryccpuff.jpg">
+                </div>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>

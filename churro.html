@@ -19,8 +19,12 @@
                 .then(html => {
                     document.getElementById('header-placeholder').innerHTML = html;
                 });
+            function goBack(){
+                window.history.back();
+            }
         </script>
         <div id = "header-placeholder"></div>
+        <div onclick="goBack()" class = "back_button_container"><img class ="back_button" src="backbutton.png" alt="Back button"></div>
         <div class = "container">
             <div class = "row">
                 <div class = "col-sm-8">
