@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shrirang Cooks</title>
+    <link rel="stylesheet" href="./foodpage.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <main>
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header-placeholder').innerHTML = html;
+                });
+            function goBack(){
+                window.history.back();
+            }
+        </script>
+        <div id = "header-placeholder"></div>
+        <div onclick="goBack()" class = "back_button_container"><img class ="back_button" src="backbutton.png" alt="Back button"></div>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-sm-8">
+                    <h1 id="foodname">Lemon Poppyseed Muffins</h1>
+                    <img class = "sm-img" src="images/lemonpoppyseedmuffins.jpg">
+                    <h2>What is it?</h2>
+                    <p>Lemon poppy seed muffins with tangy, citrusy flavor from fresh lemons and a subtle sweet, nutty flavor from poppyseeds. The poppyseeds add nice contrast to both the flavor as well as appearance of the muffin but the recipe is great with or without them. I love lemons but if you aren't a lemon person the recipe can be made with other citruses like orange.
+                    </p>
+                    <span></span>
+                    <h2>Ingredients:</h2>
+                    <h3>Muffins</h3>
+                    <ul>
+                        <li>1 1/8 cup flour</li>
+                        <li>1 teaspoon baking soda</li>
+                        <li>Pinch of baking power</li>
+                        <li>2 tbsp poppy seeds</li>
+                        <li>1/2 cup granulated sugar or too taste</li>
+                        <li>1/2 cup full fat yogurt</li>
+                        <li>1/4 cup melted butter</li>
+                        <li>3/8 cup milk</li>
+                        <li>2 tablespoon lemon juice</li>
+                        <li>1-2 tablespoon lemon zest</li>
+                        <li>Splash of vanilla extract</li>
+                    </ul>
+                    <h3>Glaze</h3>
+                    <ul>
+                        <li>1 cup sugar</li>
+                        <li>1 tablespoon milk</li>
+                        <li>Optional lemon juice</li>
+                    </ul>
+                    <span></span>
+                    <h2>Recipe</h2>
+                    <!-- Steps for recipe here -->
+                    <!-- Subsections get h3 -->
+                    <!-- Show steps as ordered list -->
+                    <!-- Images get class img_step -->
+                    <h3>Muffins</h3>
+                    <ol>
+                        <li>Preheat oven to 425 degrees Fahrenheit</li>
+                        <li>Add 1/2 cup sugar and lemon zest to a bowl</li>
+                        <img src="images/lpsmls1.jpg" class = "img_step">
+                        <li>Rub together with fingers to release more flavor and let sit</li>
+                        <img src="images/lpsmls2.jpg" class="img_step">
+                        <li>Sift in flour, baking powder, baking soda, and salt into a mixing bowl</li>
+                        <li>Add poppy seeds and whisk till combined</li>
+                        <img src="images/lpsmdry1.jpg" class="img_step">
+                        <img src="images/lpsmdry2.jpg" class="img_step">
+                        <li>Melt butter and add to a seperate bowl</li>
+                        <li>Add yogurt, lemon juice, vanilla extract, and milk to same bowl and mix well</li>
+                        <img src="images/lpsmwet1.jpg" class="img_step">
+                        <img src="images/lpsmwet2.jpg" class="img_step">
+                        <img src="images/lpsmwet3.jpg" class="img_step">
+                        <li>Add both mixtures to same bowl and mix well</li>
+                        <img src="images/lpsmbatter1.jpg" class="img_step">
+                        <img src="images/lpsmbatter2.jpg" class="img_step">
+                        <li>Add to lined muffin tin and bake at 425 for 5 minutes</li>
+                        <img src="images/lpsmtray.jpg" class="img_step">
+                        <li>Decrease heat to 350 and continue baking for 15 minutes</li>
+                        <img src="images/lpsmbaked.jpg" class="img_step">
+                    </ol>
+                    <h3>Glaze</h3>
+                    <ol>
+                        <li>Add sugar and lemon juice to a bowl and mix</li>
+                        <li>Drizzle in milk until desired glaze consitency forms</li>
+                        <img src="images/lpsmglaze.jpg" class="img_step">
+                        <li>Drizzle over muffins and enjoy</li>
+                        <img src="images/lpsmdone.jpg" class="img_step">
+                    </ol>
+                </div>
+                <div class = "col-sm-4">
+                    <img class = "food-page-img" src="images/lemonpoppyseedmuffins.jpg">
+                    <!-- food image here -->
+                </div>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
