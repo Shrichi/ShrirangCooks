@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shrirang Cooks</title>
+    <link rel="stylesheet" href="./foodpage.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <main>
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header-placeholder').innerHTML = html;
+                });
+            function goBack(){
+                window.history.back();
+            }
+        </script>
+        <div id = "header-placeholder"></div>
+        <div onclick="goBack()" class = "back_button_container"><img class ="back_button" src="backbutton.png" alt="Back button"></div>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-sm-8">
+                    <h1 id="foodname"> Pesto Gnocchi </h1>
+                    <img class = "sm-img" src="">
+                    <h2>What is it?</h2>
+                    This pesto gnocchi makes a perfect meal for any occasion, the rich, creamy pesto combined with the tender and fluffy gnocchi gives a 5 start expiriene with just a few simple ingredients.
+                    <span></span>
+                    <h2>Ingredients:</h2>
+                    <h3>Pesto</h3>
+                    <ul>
+                        <li>2 cups basil</li>
+                        <li>1/2 cup parmesean cheese*</li>
+                        <li>2-3 cloves of garlic, or to taste</li>
+                        <li>1/2 cup toasted pine nuts or cashews</li>
+                        <li>1/4 cup olive oil, adjust for consistency</li>
+                    </ul>
+                    Other cheeses work but parmesean is best
+                    <br>
+                    <h3>Gnocchi</h3>
+                    <ul>
+                        <li>3-4 medium potatoes</li>
+                        <li>2-3 cups flour, adjust until desired consistency</li>
+                        <li>1 tsp olive oil for boiling</li>
+                        <li>Pinch of salt for boiling</li>
+                        <li>Optional tomatoes for garnish</li>
+                    </ul>
+                    <span></span>
+                    <h2>Recipe</h2>
+                    <h3>Pesto</h3>
+                    <ol>
+                        <li>Add all the ingredients to a blender but leave half the oil</li>
+                        <img class = "img_step" src = "images/pgpcheese.jpg">
+                        <img class = "img_step" src = "images/pgpall.jpg">
+                        <li>Blend fully and keep adding oil until desired consistency is reached</li>
+                        <img class = "img_step" src = "images/pgpesto.jpg">
+                    </ol>
+                    <h3>Gnocchi</h3>
+                    <ol>
+                        <li>Boil and peel all of your potatoes</li>
+                        <img class = "img_step" src = "images/pgboiled potatoes.jpg">
+                        <li>Rice all of your potatoes into a large mixing bowl</li>
+                        <img class = "img_step" src = "images/pgriced.jpg">
+                        <li>Add flour 1/4 cup at a time until a dough forms</li>
+                        <img class = "img_step" src = "images/pgdough1.jpg">
+                        <img class = "img_step" src = "images/pgdough2.jpg">
+                        <li>Shape your dough into small pieces of gnocchi of any desired shape, make sure the sizes are equal for easy boiling</li>
+                        <img class = "img_step" src = "images/pgshaped.jpg">
+                        <li>Bring water to a boild with a tsp of olive oil and a pinch of salt</li>
+                        <li>Add the gnocchi and gently stir for about 2-3 minutes and take out </li>
+                        <li>Add pesto to a pan with a splash of the pasta water if needed to thin</li>
+                        <img class = "img_step" src = "images/pgpestopan.jpg">
+                        <li>Add gnocchi and mix for just a minute until well incorporated</li>
+                        <img class = "img_step" src = "images/pgsauced.jpg">
+                        <li>Add desried garnish such as cheese or tomatoes and enjoy!</li>
+                    </ol>
+                    <!-- Steps for recipe here -->
+                    <!-- Subsections get h3 -->
+                    <!-- Show steps as ordered list -->
+                    <!-- Images get class img_step -->
+                </div>
+                <div class = "col-sm-4">
+                    <img class = "food-page-img" src="images/pestognocchi.jpg">
+                    <!-- food image here -->
+                </div>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>

@@ -107,7 +107,7 @@ span{
     margin: 5px;
 }
 .img_step{
-    width: 30%;
+    height: 20vw;
     margin: 5px;
 }
 .food_talk{
@@ -137,6 +137,9 @@ form button{
     width: 98%;
     border-radius: 10px;
     border: solid 2px black;
+}
+#intro{
+    padding: 10px;
 }
 @media screen and (min-width: 575px) {
     .food-page-img{
