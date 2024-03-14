@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shrirang Cooks</title>
+    <link rel="stylesheet" href="./foodpage.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <main>
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header-placeholder').innerHTML = html;
+                });
+            function goBack(){
+                window.history.back();
+            }
+        </script>
+        <div id = "header-placeholder"></div>
+        <div onclick="goBack()" class = "back_button_container"><img class ="back_button" src="backbutton.png" alt="Back button"></div>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-sm-8">
+                    <h1 id="foodname"> Crispy Cheese Papad </h1>
+                    <img class = "sm-img" src="">
+                    <h2>What is it?</h2>
+                    This crispy cheese papad is super simple to make taking just a few minutes and ingredients you can find in your house. It makes an amazing snack served with some dipping sauce or just on its own.
+                    <span></span>
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>Salt to taste</li>
+                        <li>Ground black pepper to taste</li>
+                        <li>Chopped onion</li>
+                        <li>Chopped cucumber</li>
+                        <li>Melted butter</li>
+                        <li>Cheese (any type)</li>
+                    </ul>
+                    <span></span>
+                    <h2>Recipe</h2>
+                    <!-- Steps for recipe here -->
+                    <!-- Subsections get h3 -->
+                    <!-- Show steps as ordered list -->
+                    <!-- Images get class img_step -->
+                    <ol>
+                        <li>Soak your papad in water to soften it</li>
+                        <li>Brush papad evenly with butter for better baking</li>
+                        <li>Add in all your toppings eavenly spread and roll up</li>
+                        <img src="images/papadingredients.jpg" class="img_step">
+                        <img src="images/papadstuffed.jpg" class="img_step">
+                        <li>Hold in shape with toothpicks and bake at 400 for 5-6 minutes until crispy</li>
+                        <li>Brush with moe butter for crispiness</li>
+                        <img src="images/papadairfryer.jpg" class="img_step">
+                        <li>Cut into thirds and serve with dipping sauce!</li>
+                        <img src="images/chessepapad.jpg" class = "img_step">
+                    </ol>
+                </div>
+                <div class = "col-sm-4">
+                    <img class = "food-page-img" src="images/chessepapad.jpg">
+                    <!-- food image here -->
+                </div>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
