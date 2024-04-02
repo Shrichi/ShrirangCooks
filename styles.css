@@ -25,6 +25,7 @@ h1{
 }
 .img-link-grid img:hover{
     filter: grayscale(100%);
+    /* border: 5px #638889 solid; */
     cursor: pointer;
 }
 .img-caption{
